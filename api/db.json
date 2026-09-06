@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn Next.js rendering",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Build Devboard",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Test ISR",
+      "completed": true
+    }
+  ]
+}
