@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import TodoList from "@/components/TodoList";
 
 const API_URL = process.env.API_BASE_URL;
 
@@ -31,34 +32,19 @@ export default async function TodosPage() {
           <h1>Todos</h1>
 
           <p>
-            <strong>Rendered at:</strong> {renderedAt}
+            <strong>Rendered at:</strong>{" "}
+            {renderedAt}
+          </p>
+
+          <p>
+            This page uses Incremental Static
+            Regeneration with a 60 second interval.
           </p>
         </div>
 
         <br />
 
-        <div className="card">
-          {todos.length === 0 ? (
-            <p>No todos found.</p>
-          ) : (
-            todos.map((todo) => (
-              <div
-                key={todo.id}
-                style={{
-                  padding: "15px 0",
-                  borderBottom: "1px solid #e5e7eb",
-                }}
-              >
-                <h3>{todo.title}</h3>
-
-                <p>
-                  Status:{" "}
-                  {todo.completed ? "Completed" : "Pending"}
-                </p>
-              </div>
-            ))
-          )}
-        </div>
+        <TodoList initialTodos={todos} />
       </main>
     </>
   );
