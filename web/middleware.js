@@ -4,6 +4,8 @@ import { getToken } from "next-auth/jwt";
 
 meow
 
+meow2
+
 export async function middleware(request) {
   const token = await getToken({
     req: request,
